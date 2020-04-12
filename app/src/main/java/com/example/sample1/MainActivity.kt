@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,13 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var firstValue=findViewById(R.id.editText1)as EditText
         var secondValue=findViewById(R.id.editText2)as EditText
-        var result=findViewById(R.id.editText3)as EditText
+        var result=findViewById(R.id.editText3)as TextView
         var btnAdd=findViewById(R.id.button)as Button
 
         btnAdd.setOnClickListener {
-
-
-            result.setText(firstValue.text.toString().toInt()+secondValue.text.toString().toInt())
+            result.setText(""+(firstValue.text.toString().toInt()+secondValue.text.toString().toInt()))
         }
     }
 }
